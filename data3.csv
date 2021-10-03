@@ -1,0 +1,15 @@
+Portfolio Item;Title;User Stories;Something;Priority;Owner;Estimation;Iteration Completed;Estimate;Description;Acceptance & Criteria
+;App_1 Title_1;story 1 app1;;Low;AA;;;15;Pokemon;test
+;;story2 app 1;;;A;;;;;
+;App_1 Title_2;story 1 app1;;High;B;;;10;description app1 title2 : Hello world!;hello
+;;story2 app 1;;;A;;;;;world
+;;story3 app 1;;;C;;;;;!
+;;story4 app1;;;D;;;;;
+;;story5 app1;;;D;;;;;
+;App_3 Title_1;story 1 app3;;Medium;A;;;12;description app3 title2 : Hello Jonh!;
+;;story 2 app3;;;A;;;;;
+;;story 3 app 3;;;B;;;;;
+;App_2 Title1;story 1 app2;;Medium;C;;;26;description for fun !;
+;;story 2 app 2;;;C;;;;;
+;;story 3 app 2;;;D;;;;;
+;;story 4 app 2;;;C;;;;;
