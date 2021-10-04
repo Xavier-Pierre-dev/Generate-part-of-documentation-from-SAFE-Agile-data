@@ -177,7 +177,25 @@ But of course you can use Visual studio code or directly see on github/gitlab yo
 
 </details>
 
-Note : the author of mardown viewer certified that he don't use our data with him extension and him code source can be found on him github so that comply with security policies.
+Note : the author of markdown viewer certified that he don't use our data with him extension and him code source can be found on him github so that comply with security policies.
+
+<br>
+
+Tab showing limitation depending on what Solution you use to see the documentation :
+
+
+
+|Solution|Mermaid graph|Embed document & Script|custom css|code copy to clipboard|code coloration|
+|---|---|---|---|---|---|
+|github|<div align="center">❌</div>|<div align="center">❌</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
+|gitlab|<div align="center">✔️</div>|<div align="center">❌<br>note : work for video and sound only</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
+|markdown viewer extension|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|
+|visual studio code|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|
+
+
+Note : The limitation was due to the `Solution` you use, for example gitlab/github sanitirize our .md file so script and iframe will not work. For gitlab you can embed video / sound but you can't embed google slide, google doc... With visual studio code and markdown viewer you can embed document and script but unfortunaly for the moment we can't use code copy to clipboard like in gitlab or github. 
+
+Also for custom css on github/gitlab you should write your css inside ``style.html`` using `style` html balise instead of reference.
 
 <br>
 <br>
