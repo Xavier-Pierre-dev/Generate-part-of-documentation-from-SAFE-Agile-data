@@ -23,7 +23,7 @@
 ## Input data
 I use a CSV file containing data from a SAFE / Agile project. So on the screen you can see fake data :
 
-![image](./CSV_image.png)
+![image](./CSV_image.PNG)
 
 * __Title__ = Name of the feature
 * __User Stories__ = Name of the user stories
