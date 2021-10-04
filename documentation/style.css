@@ -40,3 +40,15 @@ table {
 svg {
     max-width: 100% !important;
 }
+
+.backHome {
+    float: right;
+    position: fixed;
+    top: calc(100vh - 50px);
+    right: 0;
+    color: #fff;
+    background-color: #141c4d;
+    border-color: #07c5ff;
+    z-index: 999;
+    text-decoration: none;
+}

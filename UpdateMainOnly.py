@@ -110,6 +110,11 @@ def valid_name(name):
     temp = temp.replace("\'", "")
     temp = temp.replace("’","")
 
+    temp = temp.replace("\r","")
+    temp = temp.replace("\n","")
+    temp = temp.replace(">","")
+    temp = temp.replace(";","")
+
     # _ become - i do that because of the url structure
     temp = temp.replace("_", "-")
     return temp
@@ -143,7 +148,7 @@ def create_Readme_feature(dataframe, path, element):
                         for words in res:
                                 # print(words)
                             if (words != ""):
-                                temp_str = temp_str + str(words).replace("\n", "<br>").replace("\r", "<br>") + " "
+                                temp_str = temp_str + str(words).replace("\n", "<br>").replace("\r", "<br>").replace("<br><br>","<br>") + " "
                                 temp_str.replace("  ", "")
                         Description_insert = temp_str
 
@@ -151,7 +156,7 @@ def create_Readme_feature(dataframe, path, element):
                         for words in res:
                             # print(words)
                             if (words != ""):
-                                temp_str = temp_str + str(words).replace("\n", "<br>").replace("\r", "<br>") + " "
+                                temp_str = temp_str + str(words).replace("\n", "<br>").replace("\r", "<br>").replace("<br><br>","<br>") + " "
                                 temp_str.replace("  ", "")
                         Acceptance_Criteria_insert = temp_str
                         print(Acceptance_Criteria_insert)
@@ -315,20 +320,29 @@ def create_Readme_app(dataframe, path, element):
                 if(element_dataframe[0] == element[0]):
                     temp_str = "|"
                     for key in KeepCollumnApp:
-                        res = remove_duplicate_from_list(data_temp[key][i_app])
-                        #print("res : "+ res)
-                        #res = data_temp[key][i_app]
-                        if(key == mainCollumn):
-                            temp_str = temp_str + "[" + element[0] + "]" + "(./" + valid_name(Dynamics) + sep_sys + valid_name(element[0])+ sep_sys + file_name + ")"
-                        else:
-                            #for words in data_temp[key][i_app]:
-                            for words in res:
-                                #print(words)
-                                if(words!=""):
-                                    temp_str = temp_str + str(words).replace("\n", "<br>").replace("\r", "<br>") + " "
-                                    temp_str.replace("  ", "")
-                        temp_str.replace("  ", "")
-                        temp_str = temp_str + " |"
+                        try:
+                            res = remove_duplicate_from_list(data_temp[key][i_app])
+
+                            #print("res : "+ res)
+                            #res = data_temp[key][i_app]
+                            if(key == mainCollumn):
+                                temp_str = temp_str + "[" + element[0].replace("\n", "").replace("\r", "") + "]" + "(./" + valid_name(Dynamics) + sep_sys + valid_name(element[0])+ sep_sys + file_name + ")"
+                            else:
+                                #for words in data_temp[key][i_app]:
+
+                                for words in res:
+                                    if(words!=""):
+                                        temp_str = str(temp_str) + str(words).replace("\n", "<br>").replace("\r", "<br>").replace("<br><br>","<br>") + " "
+                                        temp_str.replace("  ", "")
+
+
+                            temp_str.replace("  ", "")
+                            temp_str = temp_str + " |"
+                            print(temp_str)
+                        except:
+                            pass
+
+
 
             f = open(path, "a")
             f.writelines(temp_str + "\n")
@@ -347,21 +361,22 @@ def create_Readme_main(dataframe, path):
         #print("a")
         temp_path =  creation_path + parent_folder + sep_sys + valid_name(element[0]) + sep_sys + file_name
         #print(temp_path)
-        f = open(temp_path, "r")
+        if(os.path.isfile(temp_path)==True):
+            f = open(temp_path, "r")
 
-        for line in f.readlines():
-            #print("a")
-            #print(line)
-            tp_str = "## " + "[" + element[0] + "]" + "(" + "./" + valid_name(element[0]) + sep_sys + file_name + ")"
-            #print(tp_str)
-            w.writelines(line.replace("./" + valid_name(Dynamics) + "/", "./" + valid_name(element[0]) + sep_sys + valid_name(Dynamics) + sep_sys ).replace("# ", "## ").replace("## " + element[0], tp_str).replace('<link rel="stylesheet" href="./../style.css">', ""))
+            for line in f.readlines():
+                #print("a")
+                #print(line)
+                tp_str = "## " + "[" + element[0] + "]" + "(" + "./" + valid_name(element[0]) + sep_sys + file_name + ")"
+                #print(tp_str)
+                w.writelines(line.replace("./" + valid_name(Dynamics) + "/", "./" + valid_name(element[0]) + sep_sys + valid_name(Dynamics) + sep_sys ).replace("# ", "## ").replace("## " + element[0], tp_str).replace('<link rel="stylesheet" href="./../style.css">', ""))
 
-        #w.writelines(temp_file + "\n")
+            #w.writelines(temp_file + "\n")
 
-        w.writelines("\n")
-        w.writelines("<br>" + "\n")
-        w.writelines("\n")
-        f.close()
+            w.writelines("\n")
+            w.writelines("<br>" + "\n")
+            w.writelines("\n")
+            f.close()
 
 
     #w.write("hello main")
