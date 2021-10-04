@@ -49,6 +49,31 @@ We have 3 types of pages in output :
 
 Also we generate table and link from CSV file, note that we have a behaviour which will not delete the previous content already generated, that's mean if we launch again the programme then the __Feature page__ will not be changed, if we launch again the program with a new file in entries then all the tab will be update with new row but the previous row will be here of course. This behaviour fit well with iteration workflow (agile workflow) with PI (Planning iteration) wich group many iteration.
 
+With this folder structure : 
+
+```python
+.
+├── Application-1 
+│   ├── Commit
+│   │   ├── App-1-Title-1 
+│   │   │   └── Readme.md #feature page
+│   │   └── App-1-Title-2
+│   │       └── Readme.md
+│   └── Readme.md #application page
+├── Application-2
+│   ├── Commit
+│   │   └── App-2-Title1
+│   │       └── Readme.md
+│   └── Readme.md
+├── Application-3
+│   ├── Commit
+│   │   └── App-3-Title-1
+│   │       └── Readme.md
+│   └── Readme.md
+├── Readme.md #main page
+└── style.css #style for all Readme.md
+```
+
 <br>
 
 Note style are handled by :
