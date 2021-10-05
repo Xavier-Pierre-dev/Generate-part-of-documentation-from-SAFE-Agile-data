@@ -184,7 +184,6 @@ Note : the author of markdown viewer certified that he don't use our data with h
 Tab showing limitation depending on what Solution you use to see the documentation :
 
 
-
 |Solution|Mermaid graph|Embed document & Script|custom css|code copy to clipboard|code coloration|
 |---|---|---|---|---|---|
 |github|<div align="center">❌</div>|<div align="center">❌</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
