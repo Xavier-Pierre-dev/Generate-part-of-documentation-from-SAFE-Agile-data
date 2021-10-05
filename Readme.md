@@ -196,9 +196,14 @@ Note : The limitation was due to the `Solution` you use, for example gitlab/gith
 
 Also for custom css on github/gitlab you should write your css inside ``style.html`` using `style` html balise instead of reference.
 
-<br>
-<br>
+Also on visual studio code you can use many previewer enhancement :
+* [Markdown Preview Github Styling [Matt Bierner]](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles) that's the one i use. Simply this extension give you the same look as github document and this extension will not extend your previewer so it's more near to what you will see on gitlab / github.
+* [Markdown Preview Enhanced [Yiyi yang]](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced). An other previewer enhancer, this one is good but if you use this one you will need to use `style.html` and `style` balise for your custom css. Also the theme is a little bit different than github so inside `style1.html` i put some reference for some css. This extension also extend your previewer with more feature than gitlab / github in term of embediing document because you can embed pdf, jpg, csv, and code from online source and local source with ``@import file`` but if you use that, this kind of embeding will not work on your browser extension, and also not work on gitlab/github, same thing if you use different diagram wich is not handled by gitlab / github. [documentation](https://shd101wyy.github.io/markdown-preview-enhanced/#/)
 
+Note : The 2 previewers can be use together, just you will have 2 buttons for choose wich previewer you want to use. 
+
+<br>
+<br>
 
 
 ___
