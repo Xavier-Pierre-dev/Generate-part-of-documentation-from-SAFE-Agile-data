@@ -186,7 +186,7 @@ Tab showing limitation depending on what Solution you use to see the documentati
 
 |Solution|Mermaid graph|Embed document & Script|custom css|code copy to clipboard|code coloration|
 |---|---|---|---|---|---|
-|github|<div align="center">❌</div>|<div align="center">❌</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
+|github|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
 |gitlab|<div align="center">✔️</div>|<div align="center">❌<br>note : work for video and sound only</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|
 |markdown viewer extension|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|
 |visual studio code|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">✔️</div>|<div align="center">❌</div>|<div align="center">✔️</div>|
